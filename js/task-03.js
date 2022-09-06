@@ -12,3 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const listRef = document.querySelector(".gallery");
+
+// const listItems = images.map(({ url, alt, width, heigth }) => {
+//   const itemEl = document.createElement("li");
+//   itemEl.classList.add("js-gallery-item")
+//   const imgEl = document.createElement("img");
+//   imgEl.src = url;
+//   imgEl.alt = alt;
+//   imgEl.width = 360;
+//   imgEl.height = 210;
+//   itemEl.append(imgEl);
+//   listRef.append(itemEl);
+//   return listRef;
+// });
+
+// --------------З шаблонним рядком ----------------------
+const listItems = images.map(({ url, alt, width, heigth }) => { 
+  return `<li class="js-gallery-item"><a href=""><img src="${url}" alt="${alt}" width="${width}" heigth"${heigth}"></a></li>`
+});
+
+const markup = listItems.join("")
+listRef.innerHTML = markup;
+
