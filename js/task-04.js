@@ -1,5 +1,4 @@
 let counterValue = 0;
-console.log(counterValue);
 
 const buttonMinus = document.querySelector(`[data-action="decrement"]`);
 const buttonPlus = document.querySelector(`[data-action="increment"]`);
