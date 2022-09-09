@@ -32,6 +32,9 @@ const listRef = document.querySelector(".gallery");
 
 // --------------З шаблонним рядком ----------------------
 const listItems = images.map(({ url, alt, width, heigth }) => { 
+  const itemEl = document.createElement("li");
+  const imgEl = document.createElement("img");
+
   return `<li class="js-gallery-item"><a href=""><img src="${url}" alt="${alt}" width="${width}" heigth"${heigth}"></a></li>`
 });
 
